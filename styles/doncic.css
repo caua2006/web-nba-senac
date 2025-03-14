@@ -1,0 +1,66 @@
+@import url("./global.css");
+
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 80px;
+    background: linear-gradient(to right,#fdb827, #542583);
+    color: #fff;
+}
+
+.container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.container h1 {
+    font-size: 64px;
+}
+.container h2 {
+    font-size: 40px;
+}
+
+.container p {
+    text-align: justify;
+}
+
+.container img {
+    width: 100%;
+}
+.sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar hr {
+    width: 100%;
+    border: 1px solid white;
+}
+
+.sidebar img {
+    width: 200px;
+}
+
+
+.sidebar .logos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sidebar .logos img {
+    width: 75px;
+}
+
+.sidebar .stats {
+    display: flex;
+    gap: 5px;
+}
+
