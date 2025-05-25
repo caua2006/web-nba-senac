@@ -1,56 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
-    <title>NBA News</title>
+    <title data-translate="title">NBA News</title>
 </head>
 <body>
+    <!-- Theme Switcher -->
+    <div class="theme-switch">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <!-- Language Selector -->
+    <select id="language-select" class="language-select">
+        <option value="pt">Português</option>
+        <option value="en">English</option>
+    </select>
+
     <header>
         <a href="/">
-            <img src="https://logodownload.org/wp-content/uploads/2016/11/nba-logo-11.png" alt="">
+            <img src="images/nba-logo.png" alt="NBA Logo">
         </a>
 
         <nav>
-            <a href="/doncic.html">Luka Doncic</a>
-            <a href="/davis.html">Anthony Davis</a>
+            <a href="/doncic.html" data-translate="nav-doncic">Luka Doncic</a>
+            <a href="/davis.html" data-translate="nav-davis">Anthony Davis</a>
         </nav>
     </header>
 
     <main>
-        <h1>Troca bombástica na NBA 🚨🚨🚨</h1>
+        <h1 class="animate" data-translate="main-heading">Troca bombástica na NBA 🚨🚨🚨</h1>
 
-        <section>
-            <p>
+        <!-- Image Carousel -->
+        <div class="carousel">
+            <img src="images/doncic-1.jpg" alt="Luka Doncic">
+            <img src="images/doncic-2.jpg" alt="Luka Doncic Lakers">
+            <img src="images/doncic-3.jpg" alt="NBA Trade">
+            <div class="carousel-controls">
+                <button onclick="prevImage()">Previous</button>
+                <button onclick="nextImage()">Next</button>
+            </div>
+        </div>
+
+        <section class="animate">
+            <p data-translate="trade-news">
                 Trocado com o Dallas Mavericks por Anthony Davis, esloveno pode estrear na próxima segunda, dia 10. Ele se recupera de distensão muscular e vai usar o número 77 no time da Califórnia.
             </p>
-            
-            <p>
-                Apresentado no Los Angeles Lakers, Luka Doncic deve estrear na próxima segunda-feira, dia 10, ou no máximo no dia 12. Recuperando-se de uma distensão muscular na panturrilha esquerda, o esloveno de 25 anos vai usar a habitual camisa 77 em seu novo clube. Segundo a imprensa americana, Doncic perdeu o que seria o maior contrato da NBA, e deve receber no máximo US$ 229 milhões (cerca de R$ 1 bilhão) ao assinar com os Lakers.
-            </p>
-            <img src="https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2025%2F0202%2Fr1446406_1296x729_16%2D9.jpg" alt="">
         </section>
 
-        <section>
-            <h2>
-                QUAL NÚMERO LUKA VAI JOGAR?
-            </h2>
-            <p>
-                Doncic usará o habitual número 77 nos Lakers. O anúncio foi feito pela própria franquia no último domingo. O superstar popularizou o número incomum do basquete durante sua carreira na NBA. Ele escolheu o número 77 porque o número 7 já havia sido usado por um companheiro de equipe dos Mavericks em 2018. O esloveno vai ser o primeiro jogador a atuar com a 77 dos Lakers.
+        <section class="animate">
+            <h2 data-translate="number-question">QUAL NÚMERO LUKA VAI JOGAR?</h2>
+            <p data-translate="number-answer">
+                Doncic usará o habitual número 77 nos Lakers. O anúncio foi feito pela própria franquia no último domingo. O superstar popularizou o número incomum do basquete durante sua carreira na NBA.
             </p>
-            <img src="https://lncimg.lance.com.br/uploads/2025/02/Luka-Doncic-Los-Angeles-Lakers-NBA-1-scaled-aspect-ratio-512-320.jpg" alt="">
         </section>
 
-        <section>
-            <h2>QUANTO O ASTRO VAI GANHAR?</h2>
-            <p>
-                Luka Doncic estava elegível para assinar um contrato de US$ 345 milhões (o equivalente a R$ 2 bilhões) por cinco anos com os Mavs. Porém, com a mudança para o Lakers, Doncic deve fechar um contrato de no máximo US$ 229 milhões (cerca de R$ 1 bilhão). O valor oficial e o período do contrato ainda não foram anunciados.
+        <section class="animate">
+            <h2 data-translate="salary-question">QUANTO O ASTRO VAI GANHAR?</h2>
+            <p data-translate="salary-answer">
+                Luka Doncic estava elegível para assinar um contrato de US$ 345 milhões (o equivalente a R$ 2 bilhões) por cinco anos com os Mavs. Porém, com a mudança para o Lakers, Doncic deve fechar um contrato de no máximo US$ 229 milhões (cerca de R$ 1 bilhão).
             </p>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRexVkz2fxgSu7DqrhNGgPZnuCvOFj5go3KDw&s" alt="">
         </section>
 
+        <!-- Contact Form -->
+        <section class="contact-form animate">
+            <h2 data-translate="contact-title">Entre em Contato</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name" data-translate="name-label">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-translate="email-label">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-translate="message-label">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" data-translate="submit-button">Enviar</button>
+            </form>
+        </section>
 
+        <!-- Social Share Buttons -->
+        <div class="social-share">
+            <button class="facebook" onclick="shareOnFacebook()">Facebook</button>
+            <button class="twitter" onclick="shareOnTwitter()">Twitter</button>
+            <button class="whatsapp" onclick="shareOnWhatsApp()">WhatsApp</button>
+        </div>
     </main>
+
+    <script src="script/translations.js"></script>
+    <script src="script/main.js"></script>
 </body>
 </html>

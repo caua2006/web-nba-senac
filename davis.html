@@ -1,43 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/davis.css">
-    <title>Anthony Davis</title>
+    <title data-translate="davis-title">Anthony Davis</title>
 </head>
 <body>
+    <!-- Theme Switcher -->
+    <div class="theme-switch">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <!-- Language Selector -->
+    <select id="language-select" class="language-select">
+        <option value="pt">Português</option>
+        <option value="en">English</option>
+    </select>
+
     <header>
         <a href="/">
-            <img src="https://logodownload.org/wp-content/uploads/2016/11/nba-logo-11.png" alt="">
+            <img src="images/nba-logo.png" alt="NBA Logo">
         </a>
 
         <nav>
-            <a href="/doncic.html">Luka Doncic</a>
-            <a href="/davis.html">Anthony Davis</a>
+            <a href="/doncic.html" data-translate="nav-doncic">Luka Doncic</a>
+            <a href="/davis.html" data-translate="nav-davis">Anthony Davis</a>
         </nav>
     </header>
 
-
     <main>
         <div class="container">
-            <h1>Anthony Davis</h1>
-            <section>
-                <p>
+            <h1 class="animate" data-translate="davis-title">Anthony Davis</h1>
+            <section class="animate">
+                <p data-translate="davis-intro">
                     Anthony Marshon Davis Jr. (Chicago, 11 de março de 1993) é um basquetebolista estadunidense que atua como ala-pivô ou pivô. Atualmente defende o Dallas Mavericks na NBA. Davis se destacou no basquete universitário da NCAA jogando pelo Kentucky Wildcats e foi posteriormente selecionado na primeira posição no draft da NBA de 2012, passando a integrar o elenco do New Orleans Pelicans.
-                    <br>
-                    <br>
                 </p>
-                <img src="https://www.sportsnet.ca/wp-content/uploads/2025/02/Anthony-Davis-768x432.jpg" alt="">
+                <img src="images/davis-1.jpg" alt="Anthony Davis">
             </section>
-
 
             <section id="pelicans">
                 <h2>New Orleans Pelicans</h2>
                 <p>
-
                     Anthony Davis: Resumo da Carreira Ano a Ano<br>
-                   <strong> * 2012-13 (New Orleans Hornets):</strong> Draftado como a primeira escolha geral, Davis teve uma temporada de estreia sólida, com médias de 13,5 pontos, 8,2 rebotes e 1,8 bloqueios. Foi nomeado para o NBA All-Rookie First Team. <br>
+                    <strong> * 2012-13 (New Orleans Hornets):</strong> Draftado como a primeira escolha geral, Davis teve uma temporada de estreia sólida, com médias de 13,5 pontos, 8,2 rebotes e 1,8 bloqueios. Foi nomeado para o NBA All-Rookie First Team. <br>
                     <strong>* 2013-14 (New Orleans Pelicans): </strong>Com a mudança do nome da equipe para Pelicans, Davis melhorou suas estatísticas, registrando 20,8 pontos, 10 rebotes e 2,8 bloqueios por jogo. Ele se tornou um All-Star pela primeira vez. <br>
                     <strong>* 2014-15 (New Orleans Pelicans):</strong> Participou de sua primeira pós-temporada, mas os Pelicans foram eliminados na primeira rodada. Davis teve uma média de 24,4 pontos e 10,2 rebotes.
                     <strong>* 2015-16 (New Orleans Pelicans):</strong> Apesar de uma lesão que o afastou por parte da temporada, ele teve um desempenho notável com um recorde de carreira de 59 pontos em um jogo. <br>
@@ -60,34 +69,57 @@
 
             <section id="dallas">
                 <h2>Dallas Mavericks</h2>
-
                 <p> <strong>* 2024-25 (Los Angeles Lakers e Dallas Mavericks): </strong>Em fevereiro de 2025, foi trocado para o Dallas Mavericks em uma negociação surpreendente que envolveu Luka Dončić.</p>
             </section>
 
             <section>
-                <h2>AD Highlighs</h2>
-                
+                <h2 data-translate="davis-highlights">AD Highlighs</h2>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/dO14Pt11sE8?si=bRqrsJhQ48nNc6u9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
             </section>
+
+            <!-- Contact Form -->
+            <section class="contact-form animate">
+                <h2 data-translate="contact-title">Entre em Contato</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name" data-translate="name-label">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-translate="email-label">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-translate="message-label">Mensagem:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" data-translate="submit-button">Enviar</button>
+                </form>
+            </section>
+
+            <!-- Social Share Buttons -->
+            <div class="social-share">
+                <button class="facebook" onclick="shareOnFacebook()">Facebook</button>
+                <button class="twitter" onclick="shareOnTwitter()">Twitter</button>
+                <button class="whatsapp" onclick="shareOnWhatsApp()">WhatsApp</button>
+            </div>
         </div>
 
         <div class="sidebar">
             <a href="#dallas">
-                <img src="https://logodownload.org/wp-content/uploads/2021/07/dallas-mavericks-logo.png" alt="">
+                <img src="images/mavericks-logo.png" alt="Dallas Mavericks Logo">
             </a>
             <h2>Dallas Mavericks</h2>
             <hr>
 
             <div class="logos">
                 <a href="#lakers">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/2560px-Los_Angeles_Lakers_logo.svg.png" alt="">
+                    <img src="images/lakers-logo.png" alt="Los Angeles Lakers Logo">
                 </a>
                 <a href="#pelicans">
-                    <img src="https://cdn.freebiesupply.com/logos/large/2x/pelicans-logo-transparent.png" alt="">
+                    <img src="images/pelicans-logo.png" alt="New Orleans Pelicans Logo">
                 </a>
-                <img src="https://images.vexels.com/media/users/3/164649/isolated/preview/010f55d9bb5f8a28c3620583482d89ed-circulo-do-icone-do-idioma-da-bandeira-dos-eua.png" alt="">
-                
+                <img src="https://images.vexels.com/media/users/3/164649/isolated/preview/010f55d9bb5f8a28c3620583482d89ed-circulo-do-icone-do-idioma-da-bandeira-dos-eua.png" alt="USA Flag">
             </div>
 
             <hr>
@@ -116,10 +148,10 @@
                 Ouro Olímpico 2012 <br>
                 Ouro no Mundial 2014 <br>
             </p>
-
-
-
         </div>
     </main>
+
+    <script src="script/translations.js"></script>
+    <script src="script/main.js"></script>
 </body>
 </html>
